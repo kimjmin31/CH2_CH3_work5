@@ -2,9 +2,9 @@
 
 회원가입, 로그인(JWT), 게시글 CRUD 되는 REST API.
 
-- GitHub: (https://github.com/kimjmin31/CH2_CH3_work5)
-- 배포 주소: http://(EC2 퍼블릭 IP):8000
-- Swagger UI: http://(EC2 퍼블릭 IP):8000/docs
+- GitHub: https://github.com/kimjmin31/CH2_CH3_work5
+- 배포 주소: http://16.179.214.36:8000
+- Swagger UI: http://16.179.214.36:8000/docs
 
 ## 기술
 
@@ -63,14 +63,15 @@ uv run pytest
 sudo apt update
 sudo apt install -y postgresql git
 curl -LsSf https://astral.sh/uv/install.sh | sh
+source $HOME/.local/bin/env
 
 # 2. DB 생성
 sudo -u postgres psql -c "ALTER USER postgres PASSWORD '비밀번호';"
 sudo -u postgres psql -c "CREATE DATABASE board;"
 
 # 3. 코드 받기
-git clone (https://github.com/kimjmin31/CH2_CH3_work5.git)
-cd cd CH2_CH3_work5
+git clone https://github.com/kimjmin31/CH2_CH3_work5.git
+cd CH2_CH3_work5
 cp .env.example .env    # 값 입력
 uv sync
 
